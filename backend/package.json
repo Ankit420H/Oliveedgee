@@ -10,10 +10,15 @@
     "data:destroy": "node seeder.js -d",
     "test": "node --test tests/*.test.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "ecommerce",
+    "api",
+    "node",
+    "express"
+  ],
+  "author": "Ankit420H",
   "license": "ISC",
-  "description": "",
+  "description": "Backend API for Olive Edge - A Premium Tactical E-commerce Platform",
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "cloudinary": "^2.8.0",
