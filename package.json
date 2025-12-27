@@ -1,0 +1,15 @@
+{
+  "name": "olive-edge-monorepo",
+  "version": "2.0.0",
+  "description": "Digital Flagship for Technical Apparel",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "author": "Olive Edge Engineering",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.2.3"
+  }
+}

@@ -1,0 +1,46 @@
+{
+    "header": {
+        "home": "Home",
+        "shop": "Shop",
+        "blog": "Blog",
+        "login": "Login",
+        "register": "Register",
+        "profile": "Profile",
+        "admin": "Admin"
+    },
+    "hero": {
+        "title": "Tactical Superiority",
+        "subtitle": "Engineered for the elite. Master your environment with precision gear.",
+        "cta": "Shop Collection"
+    },
+    "common": {
+        "loading": "Loading mission data...",
+        "error": "Error",
+        "back": "Back to Base",
+        "status": "Status",
+        "quantity": "Quantity",
+        "inStock": "In Stock",
+        "outOfStock": "Out of Stock",
+        "addToCart": "Add to Mission Kit",
+        "reviews": "Reviews",
+        "off": "OFF",
+        "warranty": "Warranty",
+        "noWarranty": "No Warranty"
+    },
+    "shop": {
+        "title": "Mission Gear",
+        "filters": "Filters",
+        "category": "Category",
+        "showingResults": "Showing {{count}} results",
+        "noResults": "No gear found in this category."
+    },
+    "cart": {
+        "title": "Mission Manifest",
+        "empty": "Your kit is empty.",
+        "resupply": "Resupply Now",
+        "subtotal": "Subtotal",
+        "items": "Items",
+        "checkout": "Proceed to Checkout",
+        "qty": "Qty"
+    }
+}

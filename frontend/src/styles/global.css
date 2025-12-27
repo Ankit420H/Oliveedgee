@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Base Styles */
+body {
+  @apply bg-clinical-canvas text-clinical-ink font-serif antialiased;
+  line-height: 1.6;
+}
+
+/* Lenis Smooth Scroll CSS */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Typography Defaults */
+/* Typography Defaults */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-display text-clinical-ink;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  /* Relaxed from default tightening */
+}
+
+h1 {
+  @apply text-5xl md:text-7xl lg:text-heading-main font-black uppercase;
+  word-break: normal;
+  /* Avoid breaking words aggressively */
+}
+
+h2 {
+  @apply text-4xl md:text-6xl font-bold uppercase;
+}
+
+p {
+  @apply font-sans text-clinical-body leading-relaxed;
+}
+
+a {
+  @apply transition-colors duration-200;
+}
+
+/* Custom Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-clinical-canvas;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-clinical-ink rounded-full;
+}
+
+/* Utility: Hide scrollbar but allow scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Aesop-Inspired Input Component */
+.aesop-input-group {
+  position: relative;
+  width: 100%;
+  padding-top: 1rem;
+  /* Space for floating label */
+}
+
+.aesop-input {
+  width: 100%;
+  background: transparent;
+  border-bottom: 1px solid theme('colors.clinical.ink / 0.2');
+  padding: 12px 0;
+  font-family: 'Inter', sans-serif;
+  color: theme('colors.clinical.ink');
+  transition: border-color 0.3s ease;
+  outline: none;
+  border-radius: 0;
+  /* Strict square inputs */
+}
+
+.aesop-input:focus {
+  border-bottom-color: transparent;
+}
+
+.aesop-input::placeholder {
+  color: transparent;
+  /* Hide default placeholder for floating label effect */
+}
+
+/* Floating Label */
+.aesop-input-group label {
+  position: absolute;
+  top: 12px;
+  /* Initial position matching padding */
+  left: 0;
+  font-size: 0.75rem;
+  /* text-xs */
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: theme('colors.clinical.ink / 0.4');
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Float label on focus or when value exists (handled by JS or :not(:placeholder-shown)) */
+.aesop-input:focus+label,
+.aesop-input:not(:placeholder-shown)+label {
+  top: -4px;
+  font-size: 0.65rem;
+  color: theme('colors.clinical.ink');
+  opacity: 0.7;
+}
+
+
+/* Liquid Fill Accent */
+.aesop-input-group::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  /* Thicker accent */
+  background-color: theme('colors.accent.bronze');
+  /* Restrained Bronze */
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.aesop-input-group:focus-within::after {
+  width: 100%;
+}
+
+/* Accessibility Focus Ring */
+button:focus-visible,
+a:focus-visible {
+  @apply outline-2 outline-clinical-ink outline-offset-4;
+}
+
+/* Gentle Error States */
+.aesop-input.error {
+  border-bottom-color: theme('colors.signal.error');
+}
+
+.aesop-error-msg {
+  color: theme('colors.signal.error');
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glassmorphism Utility */
+.bg-glass-matte {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* 
+========================================
+   React Toastify Custom Overrides 
+   (Japandi / Clinical Aesthetic)
+========================================
+*/
+
+/* Container & Animation */
+.Toastify__toast-container {
+  padding: 1rem;
+  width: auto;
+  max-width: 400px;
+}
+
+.Toastify__toast {
+  background-color: #FFFFFF !important;
+  /* Pure White */
+  color: theme('colors.clinical.ink') !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.875rem !important;
+  /* text-sm */
+  line-height: 1.5 !important;
+  font-weight: 500 !important;
+  border-radius: 1.5rem !important;
+  /* rounded-3xl */
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1) !important;
+  /* shadow-soft */
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  padding: 1rem 1.5rem !important;
+  margin-bottom: 1rem !important;
+  display: flex !important;
+  align-items: center !important;
+  min-height: 64px !important;
+}
+
+/* Success Toast */
+.Toastify__toast--success {
+  border-left: 4px solid theme('colors.signal.success');
+}
+
+/* Error Toast */
+.Toastify__toast--error {
+  border-left: 4px solid theme('colors.signal.error');
+}
+
+/* Body Content */
+.Toastify__toast-body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Progress Bar */
+.Toastify__progress-bar {
+  background: theme('colors.clinical.ink');
+  opacity: 0.1;
+  height: 3px;
+}
+
+.Toastify__progress-bar--success {
+  background: theme('colors.signal.success');
+}
+
+.Toastify__progress-bar--error {
+  background: theme('colors.signal.error');
+}
+
+/* Close Button */
+.Toastify__close-button {
+  color: theme('colors.clinical.ink');
+  opacity: 0.3;
+  margin-left: 1rem;
+  transition: opacity 0.2s;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1;
+}
+
+/* Icons (Optional - if library inserts SVG) */
+.Toastify__toast-icon {
+  width: 20px;
+  margin-right: 0.75rem;
+}
