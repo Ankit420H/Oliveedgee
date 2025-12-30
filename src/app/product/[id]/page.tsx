@@ -40,12 +40,17 @@ const ProductPage = () => {
             setError(false);
             const { data } = await api.get(`/api/products/${id}`);
             setProduct(data);
-
-            const { data: related } = await api.get(`/api/products/${id}/related`);
-            setRelatedProducts(related);
         } catch (error) {
             console.error('Error fetching product:', error);
             setError(true);
+        }
+
+        try {
+            const { data: related } = await api.get(`/api/products/${id}/related`);
+            setRelatedProducts(related);
+        } catch (error) {
+            console.warn('Error fetching related products:', error);
+            // Do not set main error, just ignore related products failure
         } finally {
             setLoading(false);
         }

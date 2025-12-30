@@ -10,8 +10,11 @@
         "src/**",
         "public/**",
         "*.md",
-        ".env*"
+        ".env*",
+        "logs/**",
+        "**/.DS_Store"
     ],
+    "legacyWatch": true,
     "delay": 2500,
     "verbose": false,
     "execMap": {

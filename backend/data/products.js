@@ -1,7 +1,7 @@
 const products = [
     {
         name: 'Standard Issue Tee',
-        image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800&auto=format&fit=crop',
+        image: '/images/product-tee-olive.jpg',
         description: 'A foundational layer constructed from breathable, high-grade cotton. Designed for seamless integration into both field operations and downtime. The olive hue references our utilitarian heritage.',
         brand: 'Olive Edge',
         category: 'Apparel',
@@ -15,7 +15,7 @@ const products = [
     },
     {
         name: 'Terrain Cargo Trouser',
-        image: 'https://images.unsplash.com/photo-1517438476312-10d79c077509?q=80&w=800&auto=format&fit=crop',
+        image: '/images/product-cargo-camo.jpg',
         description: 'Engineered for durability across variable environments. Features a multiple-pocket architecture for essential carry and reinforced stitching to withstand rigorous movement.',
         brand: 'Olive Edge',
         category: 'Apparel',
@@ -29,7 +29,7 @@ const products = [
     },
     {
         name: 'Expedition Rucksack',
-        image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=800&auto=format&fit=crop',
+        image: '/images/product-rucksack-black.jpg',
         description: 'A high-capacity vessel for long-range missions. Water-resistant polymers protect contents from the elements, while the modular attachment system allows for customized loadouts.',
         brand: 'Olive Edge',
         category: 'Carry',
@@ -43,7 +43,7 @@ const products = [
     },
     {
         name: 'Combat Boot Mk.IV',
-        image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop',
+        image: '/images/product-boot-brown.jpg',
         description: 'Footwear designed for stability on uneven terrain. The anti-slip sole provides traction, while the breathable upper ensures comfort during extended periods of exertion.',
         brand: 'Olive Edge',
         category: 'Footwear',
@@ -57,7 +57,7 @@ const products = [
     },
     {
         name: 'Regiment Cap',
-        image: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89f?q=80&w=800&auto=format&fit=crop',
+        image: '/images/product-cap-khaki.jpg',
         description: 'A classic silhouette providing essential sun protection. Adjustable for a precise fit, this cap serves as a subtle nod to military tradition.',
         brand: 'Olive Edge',
         category: 'Accessories',
@@ -71,7 +71,7 @@ const products = [
     },
     {
         name: 'Operator Gloves',
-        image: 'https://images.unsplash.com/photo-1621045246188-b4712acde3fa?q=80&w=800&auto=format&fit=crop',
+        image: '/images/product-gloves-black.jpg',
         description: 'Hand protection offering a balance of dexterity and defense. Knuckle guards mitigate impact, while conductive fingertips allow for interface interaction without removal.',
         brand: 'Olive Edge',
         category: 'Accessories',
@@ -85,7 +85,7 @@ const products = [
     },
     {
         name: 'Field Jacket',
-        image: 'https://images.unsplash.com/photo-1559551409-dadc959f76b8?q=80&w=800&auto=format&fit=crop',
+        image: '/images/product-jacket-green.jpg',
         description: 'A versatile outer layer for inclement weather. Windproof and water-resistant, with concealed storage to maintain a streamlined profile.',
         brand: 'Olive Edge',
         category: 'Apparel',
@@ -99,7 +99,7 @@ const products = [
     },
     {
         name: 'Base Layer Shirt',
-        image: 'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=800&auto=format&fit=crop',
+        image: '/images/product-shirt-black.jpg',
         description: 'A lightweight performance garment designed for wear under armour or heavy equipment. Moisture-wicking properties keep the core dry and regulated.',
         brand: 'Olive Edge',
         category: 'Apparel',
@@ -113,7 +113,7 @@ const products = [
     },
     {
         name: 'Survival Cord Key',
-        image: 'https://images.unsplash.com/photo-1623998020836-82ae8de3783c?q=80&w=800&auto=format&fit=crop',
+        image: '/images/product-keychain-cord.jpg',
         description: 'A discreet tool for emergency preparedness. High-tensile paracord woven into a compact form, ready to be deployed when circumstances demand.',
         brand: 'Olive Edge',
         category: 'Accessories',
@@ -127,7 +127,7 @@ const products = [
     },
     {
         name: 'Identification Patch',
-        image: 'https://images.unsplash.com/photo-1616423664074-325bdf255c2f?q=80&w=800&auto=format&fit=crop',
+        image: '/images/product-patch-ir.jpg',
         description: 'An infrared-reflective identifier for low-light operations. Ensures visibility to friendly forces while maintaining a low profile elsewhere.',
         brand: 'Olive Edge',
         category: 'Accessories',
@@ -141,7 +141,7 @@ const products = [
     },
     {
         name: 'Urban Sling',
-        image: 'https://images.unsplash.com/photo-1622560867746-b6d48083a216?q=80&w=800&auto=format&fit=crop',
+        image: '/images/product-sling-black.jpg',
         description: 'A compact carry solution for daily essentials. Organized compartments and modular compatibility make it an efficient companion for the city or the field.',
         brand: 'Olive Edge',
         category: 'Carry',

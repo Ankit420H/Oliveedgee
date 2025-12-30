@@ -87,7 +87,7 @@ const HomePage = () => {
 
                     {/* Right: Immersive Image */}
                     <div className="relative h-[50vh] lg:h-auto">
-                        <img src="https://images.unsplash.com/photo-1596716027429-79f83652617f?q=80&w=2000&auto=format&fit=crop" alt="Ecosystem" className="absolute inset-0 w-full h-full object-cover" />
+                        <img src="/images/ui-hero-ecosystem.jpg" alt="Ecosystem" className="absolute inset-0 w-full h-full object-cover" />
                     </div>
                 </div>
             </section>
@@ -98,7 +98,7 @@ const HomePage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
                     {/* Poster 1 */}
                     <div className="relative h-[400px] md:h-[600px] rounded-3xl overflow-hidden group cursor-pointer">
-                        <img src="https://images.unsplash.com/photo-1542281286-9e0a56e2e224?q=80&w=2000&auto=format&fit=crop" alt="Monochrome Edit" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale group-hover:grayscale-0" />
+                        <img src="/images/ui-hero-monochrome.jpg" alt="Monochrome Edit" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale group-hover:grayscale-0" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80" />
                         <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full">
                             <span className="text-accent-bronze font-mono text-[10px] md:text-xs uppercase tracking-widest mb-2 block">Series 001</span>
@@ -110,7 +110,7 @@ const HomePage = () => {
                     </div>
                     {/* Poster 2 */}
                     <div className="relative h-[400px] md:h-[600px] rounded-3xl overflow-hidden group cursor-pointer">
-                        <img src="https://images.unsplash.com/photo-1632125943269-6dc555237748?q=80&w=2000&auto=format&fit=crop" alt="Technical Shells" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale group-hover:grayscale-0" />
+                        <img src="/images/ui-hero-shells.jpg" alt="Technical Shells" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale group-hover:grayscale-0" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80" />
                         <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full">
                             <span className="text-accent-bronze font-mono text-[10px] md:text-xs uppercase tracking-widest mb-2 block">Series 002</span>

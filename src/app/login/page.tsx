@@ -92,7 +92,7 @@ const LoginContent = () => {
             <div className="hidden md:block w-1/2 relative overflow-hidden">
                 <div className="absolute inset-0 bg-clinical-ink/10 z-10"></div>
                 <img
-                    src="https://images.unsplash.com/photo-1595590424283-b8f17842773f?q=80&w=2000&auto=format&fit=crop"
+                    src="/images/ui-auth-login.jpg"
                     alt="Gate Visual"
                     className="w-full h-full object-cover grayscale-[0.5] hover:scale-105 transition-transform duration-[2s] ease-in-out"
                 />

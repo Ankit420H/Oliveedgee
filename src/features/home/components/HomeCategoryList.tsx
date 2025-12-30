@@ -4,11 +4,11 @@ import { useState } from 'react';
 import { FaPlus } from 'react-icons/fa';
 
 const categories = [
-    { title: 'Outerwear', count: '12', image: 'https://images.unsplash.com/photo-1632125943269-6dc555237748?q=80&w=800&auto=format&fit=crop' },
-    { title: 'Tops', count: '24', image: 'https://images.unsplash.com/photo-1596716027429-79f83652617f?q=80&w=800&auto=format&fit=crop' },
-    { title: 'Bottoms', count: '18', image: 'https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=800&auto=format&fit=crop' },
-    { title: 'Footwear', count: '08', image: 'https://images.unsplash.com/photo-1542281286-9e0a56e2e224?q=80&w=800&auto=format&fit=crop' },
-    { title: 'Accessories', count: '15', image: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=800&auto=format&fit=crop' },
+    { title: 'Outerwear', count: '12', image: '/images/product-jacket-green.jpg' },
+    { title: 'Tops', count: '24', image: '/images/product-tee-olive.jpg' },
+    { title: 'Bottoms', count: '18', image: '/images/ui-cat-bottoms.jpg' },
+    { title: 'Footwear', count: '08', image: '/images/product-boot-brown.jpg' },
+    { title: 'Accessories', count: '15', image: '/images/ui-cat-accessories.jpg' },
 ];
 
 const HomeCategoryList = () => {

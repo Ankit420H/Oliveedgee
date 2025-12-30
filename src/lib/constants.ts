@@ -74,4 +74,4 @@ export const TOAST_CONFIG = {
     closeOnClick: true,
     pauseOnHover: true,
     theme: 'light',
-};
+} as const;

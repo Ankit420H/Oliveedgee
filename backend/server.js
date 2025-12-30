@@ -107,8 +107,9 @@ app.use(errorHandler);
 
 // Only listen if not running in Vercel Serverless environment
 if (!process.env.VERCEL) {
-    app.listen(PORT, () => {
-        console.log(`Server running on port ${PORT}`);
+    const HOST = process.env.NODE_ENV === 'production' ? '0.0.0.0' : '127.0.0.1';
+    app.listen(PORT, HOST, () => {
+        console.log(`Server running on port ${PORT} bound to ${HOST}`);
     });
 }
 

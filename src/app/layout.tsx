@@ -6,6 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { TOAST_CONFIG } from '../lib/constants';
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
     title: 'Olive Edge | Digital Flagship',
     description: 'Premium digital flagship for technical apparel.',
@@ -23,7 +24,7 @@ export default function RootLayout({
                     <Header />
                     <main>{children}</main>
                     <Footer />
-                    <ToastContainer {...(TOAST_CONFIG as any)} />
+                    <ToastContainer {...TOAST_CONFIG} />
                 </Providers>
             </body>
         </html>

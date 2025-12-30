@@ -45,7 +45,7 @@ const RevealText = ({
     // Use a Record with a more specific type to avoid 'any'
     // motion is an object with keys corresponding to HTML elements
     const MotionTag = (typeof Tag === 'string' && Tag in motion)
-        ? (motion as unknown as Record<string, React.FC<HTMLMotionProps<any> | SVGMotionProps<any>>>)[Tag as keyof typeof motion]
+        ? (motion as unknown as Record<string, React.FC<HTMLMotionProps<HTMLElement> | SVGMotionProps<SVGElement>>>)[Tag as keyof typeof motion]
         : motion.div;
 
     return (

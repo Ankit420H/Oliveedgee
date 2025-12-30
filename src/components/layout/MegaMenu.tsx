@@ -50,13 +50,13 @@ const MegaMenu = ({ isOpen, onMouseEnter, onMouseLeave }: MegaMenuProps) => {
                             {/* Column 3 - Featured Image */}
                             <div className="col-span-2 flex items-center gap-6">
                                 <div className="flex-1 bg-gray-200 h-48 relative overflow-hidden group rounded-3xl">
-                                    <img src="https://images.unsplash.com/photo-1542281286-9e0a56e2e224?q=80&w=800&auto=format&fit=crop" alt="Feature" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]" />
+                                    <img src="/images/ui-hero-shells.jpg" alt="Feature" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]" />
                                     <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
                                         <span className="text-white font-serif text-2xl tracking-widest">WINTER OPS</span>
                                     </div>
                                 </div>
                                 <div className="flex-1 bg-gray-200 h-48 relative overflow-hidden group rounded-3xl">
-                                    <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=800&auto=format&fit=crop" alt="Feature" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]" />
+                                    <img src="/images/product-jacket-green.jpg" alt="Feature" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]" />
                                     <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
                                         <span className="text-white font-serif text-2xl tracking-widest">ESSENTIAL GEAR</span>
                                     </div>

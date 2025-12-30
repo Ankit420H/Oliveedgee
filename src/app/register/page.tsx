@@ -64,7 +64,7 @@ const RegisterContent = () => {
             <div className="hidden md:flex md:w-1/2 bg-clinical-ink relative overflow-hidden items-center justify-center p-20">
                 <div className="absolute inset-0 opacity-20">
                     <img
-                        src="https://images.unsplash.com/photo-1544175334-92736e4b2f2c?q=80&w=2000"
+                        src="/images/ui-auth-register.jpg"
                         alt="Texture"
                         className="w-full h-full object-cover grayscale"
                     />
