@@ -1,3 +1,5 @@
+import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 import { User } from '../../features/auth';
 
 interface MegaMenuProps {
