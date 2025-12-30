@@ -36,8 +36,8 @@ const HomeNewsletter = () => {
 
                     {/* Left: Content & Form */}
                     <div className="lg:col-span-7 flex flex-col justify-between h-full">
-                        <div className="mb-12">
-                            <h2 className="font-display font-black text-5xl md:text-7xl lg:text-8xl uppercase leading-[0.85] tracking-tight mb-8 text-clinical-canvas/30">
+                        <div className="mb-8 md:mb-12">
+                            <h2 className="font-display font-black text-4xl sm:text-5xl md:text-7xl lg:text-8xl uppercase leading-[0.85] tracking-tight mb-4 md:mb-8 text-clinical-canvas/30">
                                 Intelligence<br />Briefing
                             </h2>
                             <p className="font-sans text-sm md:text-base text-clinical-canvas/60 max-w-md leading-relaxed">

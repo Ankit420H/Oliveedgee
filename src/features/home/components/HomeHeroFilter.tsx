@@ -18,13 +18,13 @@ const HomeHeroFilter = () => {
 
                 {/* Hero Text */}
                 <div className="absolute top-1/4 left-0 right-0 text-center z-10 px-4">
-                    <h1 className="font-display font-black text-6xl md:text-heading-main text-white uppercase leading-[0.9] drop-shadow-sm">
+                    <h1 className="font-display font-black text-4xl sm:text-5xl md:text-heading-main text-white uppercase leading-[0.9] drop-shadow-sm">
                         Engineered For<br />The Modern <span className="text-accent-bronze">Man</span>
                     </h1>
                 </div>
 
                 {/* Floating Filter Bar - Overlapping the bottom edge */}
-                <div className="absolute bottom-8 left-4 right-4 md:left-1/2 md:right-auto md:-translate-x-1/2 md:bottom-12 w-auto min-w-[300px] md:min-w-[800px] bg-white rounded-full shadow-soft p-2 flex flex-col md:flex-row gap-2 items-stretch z-20">
+                <div className="absolute bottom-8 left-4 right-4 md:left-1/2 md:right-auto md:-translate-x-1/2 md:bottom-12 w-auto md:min-w-[800px] bg-white rounded-3xl md:rounded-full shadow-soft p-2 flex flex-col md:flex-row gap-2 items-stretch z-20">
 
                     {/* Filter Integration */}
                     <div className="flex-1 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">

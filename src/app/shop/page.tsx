@@ -98,21 +98,21 @@ const ShopContent = () => {
     const filteredAndSortedProducts = getSortedAndFilteredProducts();
 
     return (
-        <div className="bg-clinical-canvas min-h-screen pt-20 md:pt-32 pb-40">
+        <div className="bg-clinical-canvas min-h-screen pt-20 md:pt-32 pb-24 md:pb-40">
             <div className="mx-auto px-container-sm md:px-container-md lg:px-container-lg">
 
                 {/* Header: The Collection */}
-                <div className="mb-24 flex flex-col items-center text-center">
-                    <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-clinical-ink/40 mb-6">
+                <div className="mb-12 md:mb-24 flex flex-col items-center text-center">
+                    <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-clinical-ink/40 mb-4 md:mb-6">
                         Full Inventory
                     </span>
-                    <h1 className="font-display font-black text-6xl md:text-8xl lg:text-heading-main text-clinical-ink leading-none md:leading-[0.9]">
+                    <h1 className="font-display font-black text-4xl sm:text-6xl md:text-8xl lg:text-heading-main text-clinical-ink leading-none md:leading-[0.9]">
                         All Tactical Assets
                     </h1>
                 </div>
 
                 {/* Filters & Sorting */}
-                <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-32 sticky top-8 z-30 py-4 mix-blend-multiply bg-clinical-canvas/80 backdrop-blur-sm rounded-full px-8">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 mb-16 md:mb-32 sticky top-20 md:top-8 z-30 py-4 mix-blend-multiply bg-clinical-canvas/90 backdrop-blur-sm rounded-3xl md:rounded-full px-6 md:px-8 border border-clinical-ink/5 shadow-soft w-full">
                     {/* Category Filters */}
                     <div className="flex flex-wrap justify-center gap-4">
                         {categories.map(category => (
@@ -173,7 +173,7 @@ const ShopContent = () => {
                             </button>
                         </div>
                     ) : (
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-32">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 md:gap-x-8 md:gap-y-32">
                             {filteredAndSortedProducts.map((product, index) => (
                                 <div
                                     key={product._id}

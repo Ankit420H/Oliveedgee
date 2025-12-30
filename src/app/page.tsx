@@ -37,14 +37,14 @@ const HomePage = () => {
             {/* Metadata handled in layout.tsx */}
 
             {/* 1. Hero with Filter Widget - Poster Style */}
-            <div className="px-container-sm md:px-container-md lg:px-container-lg pt-20 md:pt-32 pb-24">
+            <div className="px-container-sm md:px-container-md lg:px-container-lg pt-20 md:pt-32 pb-12 md:pb-24">
                 <HomeHeroFilter />
             </div>
 
             {/* 2. Collection Grid (3-Col) - "New Arrivals" */}
-            <div className="px-container-sm md:px-container-md lg:px-container-lg pb-24">
-                <div className="flex items-end justify-between mb-12 border-b border-clinical-ink/10 pb-6">
-                    <h2 className="font-display font-black text-6xl md:text-8xl text-clinical-ink uppercase leading-[0.9]">
+            <div className="px-container-sm md:px-container-md lg:px-container-lg pb-12 md:pb-24">
+                <div className="flex items-end justify-between mb-8 md:mb-12 border-b border-clinical-ink/10 pb-4 md:pb-6">
+                    <h2 className="font-display font-black text-4xl sm:text-5xl md:text-8xl text-clinical-ink uppercase leading-[0.9]">
                         Latest<br /><span className="text-clinical-ink/20">Drops</span>
                     </h2>
                     <Link href="/shop" className="hidden md:flex items-center gap-2 text-xs font-mono uppercase tracking-widest hover:text-accent-bronze transition-colors">
@@ -53,8 +53,8 @@ const HomePage = () => {
                 </div>
 
                 {loading ? (
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {[1, 2, 3].map((n) => <SkeletonLoader key={n} className="h-[500px] rounded-2xl" />)}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {[1, 2, 3].map((n) => <SkeletonLoader key={n} className="h-[350px] md:h-[500px] rounded-2xl" />)}
                     </div>
                 ) : (
                     <HomeCollectionGrid products={products} />
@@ -69,8 +69,8 @@ const HomePage = () => {
                         <div className="absolute top-0 right-0 w-64 h-64 bg-accent-bronze opacity-5 blur-[100px] rounded-full pointer-events-none"></div>
 
                         <div>
-                            <span className="font-mono text-accent-bronze text-xs tracking-widest uppercase mb-4 block">The Ecosystem</span>
-                            <h2 className="font-display font-black text-5xl md:text-7xl uppercase leading-[0.9] mb-8">
+                            <span className="font-mono text-accent-bronze text-[10px] md:text-xs tracking-widest uppercase mb-4 block">The Ecosystem</span>
+                            <h2 className="font-display font-black text-4xl sm:text-5xl md:text-7xl uppercase leading-[0.9] mb-6 md:mb-8">
                                 Form Follows <br /><span className="text-transparent stroke-text hover:text-accent-bronze transition-colors duration-500 cursor-default" style={{ WebkitTextStroke: '2px #C5A065' }}>Function</span>
                             </h2>
                             <p className="font-sans text-lg text-clinical-canvas/60 max-w-md leading-relaxed">
@@ -93,28 +93,28 @@ const HomePage = () => {
             </section>
 
             {/* 4. Featured Collections - "Poster Grid" */}
-            <section className="px-container-sm md:px-container-md lg:px-container-lg pb-24">
-                <h2 className="font-display font-bold text-3xl mb-12 text-center md:text-left">Curated Series</h2>
+            <section className="px-container-sm md:px-container-md lg:px-container-lg pb-12 md:pb-24">
+                <h2 className="font-display font-bold text-2xl md:text-3xl mb-8 md:mb-12 text-center md:text-left">Curated Series</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
                     {/* Poster 1 */}
-                    <div className="relative h-[600px] rounded-3xl overflow-hidden group cursor-pointer">
+                    <div className="relative h-[400px] md:h-[600px] rounded-3xl overflow-hidden group cursor-pointer">
                         <img src="https://images.unsplash.com/photo-1542281286-9e0a56e2e224?q=80&w=2000&auto=format&fit=crop" alt="Monochrome Edit" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale group-hover:grayscale-0" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80" />
                         <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full">
-                            <span className="text-accent-bronze font-mono text-xs uppercase tracking-widest mb-2 block">Series 001</span>
-                            <h3 className="text-5xl md:text-7xl font-display font-black text-white uppercase leading-[0.9] mb-4">Monochrome<br />Edit</h3>
+                            <span className="text-accent-bronze font-mono text-[10px] md:text-xs uppercase tracking-widest mb-2 block">Series 001</span>
+                            <h3 className="text-4xl md:text-7xl font-display font-black text-white uppercase leading-[0.9] mb-4">Monochrome<br />Edit</h3>
                             <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white group-hover:bg-accent-bronze group-hover:text-white group-hover:border-accent-bronze transition-all">
                                 <span className="text-xl">↗</span>
                             </div>
                         </div>
                     </div>
                     {/* Poster 2 */}
-                    <div className="relative h-[600px] rounded-3xl overflow-hidden group cursor-pointer">
+                    <div className="relative h-[400px] md:h-[600px] rounded-3xl overflow-hidden group cursor-pointer">
                         <img src="https://images.unsplash.com/photo-1632125943269-6dc555237748?q=80&w=2000&auto=format&fit=crop" alt="Technical Shells" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale group-hover:grayscale-0" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80" />
                         <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full">
-                            <span className="text-accent-bronze font-mono text-xs uppercase tracking-widest mb-2 block">Series 002</span>
-                            <h3 className="text-5xl md:text-7xl font-display font-black text-white uppercase leading-[0.9] mb-4">Technical<br />Shells</h3>
+                            <span className="text-accent-bronze font-mono text-[10px] md:text-xs uppercase tracking-widest mb-2 block">Series 002</span>
+                            <h3 className="text-4xl md:text-7xl font-display font-black text-white uppercase leading-[0.9] mb-4">Technical<br />Shells</h3>
                             <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white group-hover:bg-accent-bronze group-hover:text-white group-hover:border-accent-bronze transition-all">
                                 <span className="text-xl">↗</span>
                             </div>
@@ -124,7 +124,7 @@ const HomePage = () => {
             </section>
 
             {/* 5. Shop By Category (System) */}
-            <div className="px-container-sm md:px-container-md lg:px-container-lg pb-24">
+            <div className="px-container-sm md:px-container-md lg:px-container-lg pb-12 md:pb-24">
                 <HomeCategoryList />
             </div>
 
