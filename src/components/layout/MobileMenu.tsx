@@ -41,7 +41,7 @@ const MobileMenu = ({ isOpen, onClose, user, logout }: MobileMenuProps) => {
     ];
 
     if (user && user.isAdmin) {
-        links.splice(2, 0, { to: "/admin/dashboard", label: "Admin", icon: <FaUser /> });
+        links.splice(2, 0, { to: "/admin", label: "Admin", icon: <FaUser /> });
     }
 
     return (

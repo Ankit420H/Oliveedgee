@@ -141,6 +141,7 @@ const Header = () => {
                     isOpen={megaMenuOpen}
                     onMouseEnter={() => setMegaMenuOpen(true)}
                     onMouseLeave={() => setMegaMenuOpen(false)}
+                    user={user}
                 />
             </header>
 

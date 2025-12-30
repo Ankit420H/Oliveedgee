@@ -1,13 +1,13 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
+import { User } from '../../features/auth';
 
 interface MegaMenuProps {
     isOpen: boolean;
     onMouseEnter: () => void;
     onMouseLeave: () => void;
+    user: User | null;
 }
 
-const MegaMenu = ({ isOpen, onMouseEnter, onMouseLeave }: MegaMenuProps) => {
+const MegaMenu = ({ isOpen, onMouseEnter, onMouseLeave, user }: MegaMenuProps) => {
     return (
         <AnimatePresence>
             {isOpen && (
@@ -28,6 +28,13 @@ const MegaMenu = ({ isOpen, onMouseEnter, onMouseLeave }: MegaMenuProps) => {
                                     Categories
                                 </h3>
                                 <ul className="space-y-4">
+                                    {user?.isAdmin && (
+                                        <li>
+                                            <Link href="/admin" className="font-sans text-sm uppercase tracking-widest text-red-800 font-bold hover:text-accent-bronze transition-colors flex items-center gap-2">
+                                                Admin Dashboard
+                                            </Link>
+                                        </li>
+                                    )}
                                     <li><Link href="/shop?category=new" className="font-sans text-sm uppercase tracking-widest text-clinical-ink hover:text-accent-bronze transition-colors">New Arrivals</Link></li>
                                     <li><Link href="/shop?category=apparel" className="font-sans text-sm uppercase tracking-widest text-clinical-ink hover:text-accent-bronze transition-colors">Apparel</Link></li>
                                     <li><Link href="/shop?category=footwear" className="font-sans text-sm uppercase tracking-widest text-clinical-ink hover:text-accent-bronze transition-colors">Footwear</Link></li>

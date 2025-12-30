@@ -125,28 +125,35 @@ const AdminDashboard = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                     {/* STATS CARDS */}
-                    <div className="bg-clinical-canvas p-8 rounded-3xl border border-clinical-ink/10 flex flex-col justify-between hover:shadow-lg transition-shadow">
-                        <div className="flex items-center justify-between mb-4">
-                            <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-clinical-ink/40">Total Orders</h3>
-                            <FaClipboardList className="text-clinical-ink/20 text-2xl" />
+                    <Link href="/admin/orders">
+                        <div className="bg-clinical-canvas p-8 rounded-3xl border border-clinical-ink/10 flex flex-col justify-between hover:shadow-lg transition-shadow cursor-pointer h-full group">
+                            <div className="flex items-center justify-between mb-4">
+                                <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-clinical-ink/40 group-hover:text-accent-bronze transition-colors">Total Orders</h3>
+                                <FaClipboardList className="text-clinical-ink/20 text-2xl group-hover:text-accent-bronze transition-colors" />
+                            </div>
+                            <p className="font-display font-black text-6xl text-clinical-ink">{stats.orders}</p>
+                            <span className="text-[10px] uppercase tracking-widest text-clinical-ink/30 mt-4 group-hover:text-clinical-ink transition-colors">Manage Orders &rarr;</span>
                         </div>
-                        <p className="font-display font-black text-6xl text-clinical-ink">{stats.orders}</p>
-                    </div>
+                    </Link>
 
-                    <div className="bg-clinical-canvas p-8 rounded-3xl border border-clinical-ink/10 flex flex-col justify-between hover:shadow-lg transition-shadow">
-                        <div className="flex items-center justify-between mb-4">
-                            <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-clinical-ink/40">Total Users</h3>
-                            <FaUsers className="text-clinical-ink/20 text-2xl" />
+                    <Link href="/admin/users">
+                        <div className="bg-clinical-canvas p-8 rounded-3xl border border-clinical-ink/10 flex flex-col justify-between hover:shadow-lg transition-shadow cursor-pointer h-full group">
+                            <div className="flex items-center justify-between mb-4">
+                                <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-clinical-ink/40 group-hover:text-accent-bronze transition-colors">Total Users</h3>
+                                <FaUsers className="text-clinical-ink/20 text-2xl group-hover:text-accent-bronze transition-colors" />
+                            </div>
+                            <p className="font-display font-black text-6xl text-clinical-ink">{stats.users}</p>
+                            <span className="text-[10px] uppercase tracking-widest text-clinical-ink/30 mt-4 group-hover:text-clinical-ink transition-colors">Manage Users &rarr;</span>
                         </div>
-                        <p className="font-display font-black text-6xl text-clinical-ink">{stats.users}</p>
-                    </div>
+                    </Link>
 
-                    <div className="bg-clinical-canvas p-8 rounded-3xl border border-clinical-ink/10 flex flex-col justify-between hover:shadow-lg transition-shadow">
+                    <div className="bg-clinical-canvas p-8 rounded-3xl border border-clinical-ink/10 flex flex-col justify-between hover:shadow-lg transition-shadow h-full">
                         <div className="flex items-center justify-between mb-4">
                             <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-clinical-ink/40">Total Products</h3>
                             <FaBox className="text-clinical-ink/20 text-2xl" />
                         </div>
                         <p className="font-display font-black text-6xl text-clinical-ink">{stats.products}</p>
+                        <span className="text-[10px] uppercase tracking-widest text-clinical-ink/30 mt-4">Managed Below &darr;</span>
                     </div>
                 </div>
 
