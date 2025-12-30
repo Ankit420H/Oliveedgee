@@ -36,7 +36,31 @@ const LoginContent = () => {
         }
     }, [router, user, redirect, loading]);
 
-    // ... (skipping unchanged code)
+    useEffect(() => {
+        const reason = searchParams.get('reason');
+        if (reason === 'session_expired') {
+            setTimeout(() => {
+                setAlertConfig({
+                    title: 'Session Terminated',
+                    message: 'Your authenticated session has expired (Validity: 30d). Please re-establish connection.',
+                    type: 'warning',
+                    btnText: 'Proceed to Login'
+                });
+                setIsAlertOpen(true);
+            }, 0);
+        }
+    }, [searchParams]);
+
+    const validate = () => {
+        const newErrors: { email?: string; password?: string } = {};
+        if (!email) newErrors.email = 'Please enter your email address.';
+        else if (!/\S+@\S+\.\S+/.test(email)) newErrors.email = 'We need a valid email to reach you.';
+
+        if (!password) newErrors.password = 'Password is required.';
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
 
     const submitHandler = async (e: React.FormEvent) => {
         e.preventDefault();
