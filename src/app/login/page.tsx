@@ -32,35 +32,11 @@ const LoginContent = () => {
 
     useEffect(() => {
         if (!loading && user) {
-            router.push(user.isAdmin ? '/admin/dashboard' : redirect);
+            router.push(user.isAdmin ? '/admin' : redirect);
         }
     }, [router, user, redirect, loading]);
 
-    useEffect(() => {
-        const reason = searchParams.get('reason');
-        if (reason === 'session_expired') {
-            setTimeout(() => {
-                setAlertConfig({
-                    title: 'Session Terminated',
-                    message: 'Your authenticated session has expired (Validity: 30d). Please re-establish connection.',
-                    type: 'warning',
-                    btnText: 'Proceed to Login'
-                });
-                setIsAlertOpen(true);
-            }, 0);
-        }
-    }, [searchParams]);
-
-    const validate = () => {
-        const newErrors: { email?: string; password?: string } = {};
-        if (!email) newErrors.email = 'Please enter your email address.';
-        else if (!/\S+@\S+\.\S+/.test(email)) newErrors.email = 'We need a valid email to reach you.';
-
-        if (!password) newErrors.password = 'Password is required.';
-
-        setErrors(newErrors);
-        return Object.keys(newErrors).length === 0;
-    };
+    // ... (skipping unchanged code)
 
     const submitHandler = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -68,7 +44,7 @@ const LoginContent = () => {
         if (validate()) {
             try {
                 const userData = await login(email, password);
-                router.push(userData.isAdmin ? '/admin/dashboard' : redirect);
+                router.push(userData.isAdmin ? '/admin' : redirect);
             } catch (err: unknown) {
                 setAuthError(getErrorMessage(err));
             }
