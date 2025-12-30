@@ -51,7 +51,7 @@ test('Product API Pagination Test', async (t) => {
             const response = await fetch(`${BASE_URL}?limit=${limit}`);
             const data = await response.json();
             assert.ok(data.products.length <= limit, `Should return <= ${limit} products`);
-        } catch (error) {
+        } catch {
             // Ignore network errors if handled above
         }
     });

@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import colors from 'colors';
+import 'colors';
 import fs from 'fs';
 import path from 'path';
 
@@ -32,7 +32,7 @@ const requiredVars = [
 
 console.log('\nChecking Environment Variables...'.cyan.bold);
 
-let missing = [];
+const missing = [];
 
 requiredVars.forEach(key => {
     if (!process.env[key]) {

@@ -3,8 +3,6 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import connectDB from './config/db.js';
-import mongoSanitize from 'express-mongo-sanitize';
-import hpp from 'hpp';
 
 const app = express();
 const PORT = process.env.PORT || 5001;

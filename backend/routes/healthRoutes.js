@@ -29,7 +29,7 @@ router.get('/', async (req, res) => {
             health.database = 'disconnected';
             health.status = 'degraded';
         }
-    } catch (err) {
+    } catch {
         health.database = 'error';
         health.status = 'unhealthy';
     }

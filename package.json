@@ -12,7 +12,7 @@
     "start": "next start",
     "data:import": "node backend/seeder.js",
     "data:destroy": "node backend/seeder.js -d",
-    "lint": "next lint src",
+    "lint": "eslint .",
     "check:env": "node backend/check-env.js",
     "test": "node --test backend/tests/*.test.js"
   },

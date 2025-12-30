@@ -230,7 +230,6 @@ const updateUser = asyncHandler(async (req, res) => {
     }
 });
 
-import { sendWelcomeEmail } from '../utils/emailService.js';
 
 // @desc    Send OTP to phone (Phone-only flow)
 // @route   POST /api/users/send-otp

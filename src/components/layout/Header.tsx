@@ -2,7 +2,6 @@
 
 import { useContext, useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { AuthContext, AuthContextType } from '../../features/auth';
 import { CartContext, CartContextType } from '../../features/cart';
 import { WishlistContext, WishlistContextType } from '../../features/wishlist';
@@ -10,14 +9,12 @@ import MobileMenu from './MobileMenu';
 import MegaMenu from './MegaMenu';
 import SearchOverlay from './SearchOverlay';
 import { FaBars, FaSearch, FaShoppingBag, FaBookmark } from 'react-icons/fa';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const Header = () => {
     const { user, logout } = useContext(AuthContext) as AuthContextType;
     const { cartItems } = useContext(CartContext) as CartContextType;
     const { wishlist } = useContext(WishlistContext) as WishlistContextType;
 
-    const pathname = usePathname();
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [searchOpen, setSearchOpen] = useState(false);
     const [megaMenuOpen, setMegaMenuOpen] = useState(false);
@@ -32,8 +29,6 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const isHome = pathname === '/';
-
     return (
         <>
             <SearchOverlay isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
@@ -46,8 +41,8 @@ const Header = () => {
             {/* Main Header - Sticky & Responsive */}
             <header
                 className={`sticky top-0 z-50 w-full transition-all duration-300 ease-in-out ${isScrolled
-                        ? 'bg-clinical-canvas/90 backdrop-blur-md shadow-sm py-4'
-                        : 'bg-clinical-canvas py-6'
+                    ? 'bg-clinical-canvas/90 backdrop-blur-md shadow-sm py-4'
+                    : 'bg-clinical-canvas py-6'
                     }`}
             >
                 <div className="container mx-auto px-6 h-full flex justify-between items-center">

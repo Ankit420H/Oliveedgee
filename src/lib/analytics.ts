@@ -1,8 +1,14 @@
 // E-commerce event tracking for Google Analytics 4
 
-export const trackEvent = (eventName: string, eventParams: Record<string, any> = {}) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', eventName, eventParams);
+declare global {
+    interface Window {
+        gtag: (command: string, eventName: string, eventParams?: Record<string, string | number | boolean | undefined | object>) => void;
+    }
+}
+
+export const trackEvent = (eventName: string, eventParams: Record<string, string | number | boolean | undefined | object> = {}) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', eventName, eventParams);
     }
 };
 
