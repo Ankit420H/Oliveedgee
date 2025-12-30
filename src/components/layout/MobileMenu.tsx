@@ -53,7 +53,7 @@ const MobileMenu = ({ isOpen, onClose, user, logout }: MobileMenuProps) => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={onClose}
-                        className="fixed inset-0 bg-black/50 z-[1001] md:hidden"
+                        className="fixed inset-0 bg-black/50 z-[1001] lg:hidden"
                     />
 
                     <motion.div
@@ -61,7 +61,7 @@ const MobileMenu = ({ isOpen, onClose, user, logout }: MobileMenuProps) => {
                         initial="closed"
                         animate="open"
                         exit="closed"
-                        className="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-clinical-canvas border-l border-clinical-ink/10 z-[1002] p-8 shadow-2xl md:hidden flex flex-col rounded-l-3xl"
+                        className="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-clinical-canvas border-l border-clinical-ink/10 z-[1002] p-8 shadow-2xl lg:hidden flex flex-col rounded-l-3xl"
                     >
                         <div className="flex justify-between items-center mb-16">
                             <span className="font-serif text-2xl text-clinical-ink">

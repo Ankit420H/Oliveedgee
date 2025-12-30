@@ -18,7 +18,7 @@ const MegaMenu = ({ isOpen, onMouseEnter, onMouseLeave }: MegaMenuProps) => {
                     transition={{ duration: 0.2 }}
                     onMouseEnter={onMouseEnter}
                     onMouseLeave={onMouseLeave}
-                    className="absolute top-20 left-4 right-4 mx-auto max-w-[1400px] bg-clinical-canvas border border-clinical-ink/10 z-40 shadow-2xl rounded-3xl"
+                    className="absolute top-full mt-2 left-4 right-4 mx-auto max-w-[1400px] bg-clinical-canvas border border-clinical-ink/10 z-40 shadow-2xl rounded-3xl"
                 >
                     <div className="container mx-auto px-10 py-12">
                         <div className="grid grid-cols-4 gap-12">

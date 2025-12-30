@@ -1,5 +1,0 @@
-1:"$Sreact.fragment"
-2:I[97367,["/_next/static/chunks/6153d1a363729c2c.js","/_next/static/chunks/fbaf67460bbbea1b.js","/_next/static/chunks/46107077bc8eb4da.js","/_next/static/chunks/f6e37e5084483ee7.js","/_next/static/chunks/4cd10aa68629030d.js"],"ViewportBoundary"]
-3:I[97367,["/_next/static/chunks/6153d1a363729c2c.js","/_next/static/chunks/fbaf67460bbbea1b.js","/_next/static/chunks/46107077bc8eb4da.js","/_next/static/chunks/f6e37e5084483ee7.js","/_next/static/chunks/4cd10aa68629030d.js"],"MetadataBoundary"]
-4:"$Sreact.suspense"
-0:{"buildId":"ZRf1LvKje-MLzBjBo2WOF","rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Olive Edge | Digital Flagship"}],["$","meta","1",{"name":"description","content":"Premium digital flagship for technical apparel."}]]}]}]}],null]}],"loading":null,"isPartial":false}

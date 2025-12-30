@@ -17,7 +17,7 @@ const requiredVars = [
     'PORT',
     'MONGODB_URI',
     'JWT_SECRET',
-    'PAYPAL_CLIENT_ID', // Optional, but good to check
+    // 'PAYPAL_CLIENT_ID', // Optional
     'RAZORPAY_KEY_ID',
     'RAZORPAY_KEY_SECRET',
     'CLOUDINARY_CLOUD_NAME',
