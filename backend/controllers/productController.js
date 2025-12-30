@@ -64,6 +64,7 @@ const createProduct = asyncHandler(async (req, res) => {
 
         const product = new Product({
             name: name || 'Sample name',
+            slug: (name || 'Sample name').toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '') + '-' + Date.now(),
             price: price || 0,
             user: req.user._id,
             sku: 'SKU-' + Date.now(),

@@ -14,6 +14,7 @@ import {
     verifyOtp,
     getUserReviews,
 } from '../controllers/userController.js';
+import { getSharedWishlist, generateWishlistLink } from '../services/wishlistSharingService.js';
 import { protect, admin } from '../middleware/authMiddleware.js';
 
 router.route('/').post(registerUser).get(protect, admin, getUsers);
@@ -28,6 +29,10 @@ router
 
 router.route('/profile/address').put(protect, updateUserAddresses);
 router.get('/reviews', protect, getUserReviews);
+
+// Wishlist sharing routes
+router.get('/wishlist/share/:userId', getSharedWishlist);
+router.post('/wishlist/generate-link', protect, generateWishlistLink);
 
 
 router

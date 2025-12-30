@@ -23,7 +23,11 @@ const importData = async () => {
         const adminUser = createdUsers[0]._id;
 
         const sampleProducts = products.map((product) => {
-            return { ...product, user: adminUser };
+            return {
+                ...product,
+                user: adminUser,
+                slug: product.name.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')
+            };
         });
 
         await Product.insertMany(sampleProducts);

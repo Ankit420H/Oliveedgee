@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///Users/ankitkumaryadav/Desktop/Olive-Edge/src/app/page.tsx"],"sourcesContent":["export default function Home() {\n    return (\n        <main className=\"flex min-h-screen flex-col items-center justify-between p-24\">\n            <h1 className=\"text-4xl font-bold\">Olive Edge on Next.js</h1>\n            <p className=\"mt-4\">Migration Successful.</p>\n        </main>\n    )\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACpB,qBACI,8OAAC;QAAK,WAAU;;0BACZ,8OAAC;gBAAG,WAAU;0BAAqB;;;;;;0BACnC,8OAAC;gBAAE,WAAU;0BAAO;;;;;;;;;;;;AAGhC"}}]
+}

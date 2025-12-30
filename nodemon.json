@@ -1,0 +1,20 @@
+{
+    "watch": [
+        "backend"
+    ],
+    "ext": "js,json",
+    "ignore": [
+        ".git",
+        "node_modules/**",
+        ".next/**",
+        "src/**",
+        "public/**",
+        "*.md",
+        ".env*"
+    ],
+    "delay": 2500,
+    "verbose": false,
+    "execMap": {
+        "js": "node"
+    }
+}

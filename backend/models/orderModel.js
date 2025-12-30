@@ -71,6 +71,17 @@ const orderSchema = mongoose.Schema({
     deliveredAt: {
         type: Date,
     },
+    orderStatus: {
+        type: String,
+        enum: ['pending', 'processing', 'shipped', 'delivered', 'cancelled'],
+        default: 'pending',
+    },
+    shippedAt: {
+        type: Date,
+    },
+    estimatedDelivery: {
+        type: Date,
+    },
     isCancelled: {
         type: Boolean,
         required: true,

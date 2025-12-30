@@ -3,16 +3,20 @@ const router = express.Router();
 import {
     getProducts,
     getProductById,
-    deleteProduct,
     createProduct,
     updateProduct,
+    deleteProduct,
     createProductReview,
-    getRelatedProducts
 } from '../controllers/productController.js';
+import { searchProducts, getSearchSuggestions } from '../services/searchService.js';
 import { protect, admin } from '../middleware/authMiddleware.js';
 
+// Search routes (must be before /:id routes)
+router.route('/search').get(searchProducts);
+router.route('/suggest').get(getSearchSuggestions);
+
 router.route('/').get(getProducts).post(protect, admin, createProduct);
-router.get('/:id/related', getRelatedProducts);
+router.route('/:id/reviews').post(protect, createProductReview);
 router
     .route('/:id')
     .get(getProductById)
