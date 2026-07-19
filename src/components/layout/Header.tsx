@@ -40,9 +40,9 @@ const Header = () => {
 
             {/* Main Header - Sticky & Responsive */}
             <header
-                className={`sticky top-0 z-50 w-full transition-all duration-300 ease-in-out ${isScrolled
-                    ? 'bg-clinical-canvas/90 backdrop-blur-md shadow-sm py-4'
-                    : 'bg-clinical-canvas py-6'
+                className={`sticky top-0 z-50 w-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${isScrolled
+                    ? 'glass-panel border-none rounded-none !bg-white/40 py-4'
+                    : 'bg-transparent py-6'
                     }`}
             >
                 <div className="container mx-auto px-6 h-full flex justify-between items-center">

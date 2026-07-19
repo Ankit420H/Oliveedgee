@@ -19,7 +19,8 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className="antialiased">
+            <body className="antialiased relative">
+                <div className="noise-overlay" />
                 <Providers>
                     <Header />
                     <main>{children}</main>
